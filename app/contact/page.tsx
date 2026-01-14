@@ -83,10 +83,67 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="glassmorphism border border-gray-800 rounded-2xl p-8">
-              <DemoOptInForm />
-            </div>
+           {/* Contact Form */}
+<div className="glassmorphism border border-gray-800 rounded-2xl p-8">
+  <form
+    action="https://formsubmit.co/novatidecreative@gmail.com"
+    method="POST"
+    className="space-y-6"
+  >
+    <div>
+      <label className="block text-gray-300 mb-2">Name</label>
+      <input
+        type="text"
+        name="name"
+        required
+        className="w-full p-3 rounded-lg bg-black/40 border border-gray-700 text-white"
+        placeholder="Your Name"
+      />
+    </div>
+
+    <div>
+      <label className="block text-gray-300 mb-2">Email</label>
+      <input
+        type="email"
+        name="email"
+        required
+        className="w-full p-3 rounded-lg bg-black/40 border border-gray-700 text-white"
+        placeholder="Your Email"
+      />
+    </div>
+
+    <div>
+      <label className="block text-gray-300 mb-2">Phone</label>
+      <input
+        type="text"
+        name="phone"
+        className="w-full p-3 rounded-lg bg-black/40 border border-gray-700 text-white"
+        placeholder="Phone Number"
+      />
+    </div>
+
+    <div>
+      <label className="block text-gray-300 mb-2">Message</label>
+      <textarea
+        name="message"
+        required
+        className="w-full p-3 rounded-lg bg-black/40 border border-gray-700 text-white h-32"
+        placeholder="Tell us how we can help"
+      ></textarea>
+    </div>
+
+    {/* Redirect to your thank-you page */}
+    <input
+      type="hidden"
+      name="_next"
+      value="https://novatidecreative.vercel.app/thank-you"
+    />
+
+    {/* Email subject line */}
+    <input
+      type="hidden"
+      name="_subject"
+
           </div>
         </div>
       </section>
