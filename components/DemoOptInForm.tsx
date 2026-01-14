@@ -3,13 +3,15 @@
 import { useState, FormEvent } from "react";
 import { CheckCircle, Loader2 } from "lucide-react";
 
+ const WEB3FORMS_ACCESS_KEY = "cc32d85d-bc44-43c7-93dc-8fcb35463b76"; // <- put your access key here
+
 export default function DemoOptInForm() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
     business: "",
-    smsConsent: false
+    smsConsent: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -25,7 +27,11 @@ export default function DemoOptInForm() {
 
     if (!formData.phone.trim()) {
       newErrors.phone = "Phone number is required";
-    } else if (!/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(formData.phone)) {
+    } else if (
+      !/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(
+        formData.phone
+      )
+    ) {
       newErrors.phone = "Please enter a valid phone number";
     }
 
@@ -58,17 +64,33 @@ export default function DemoOptInForm() {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call - replace with your actual endpoint
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      // TODO: Replace with actual API call
-      // const response = await fetch('/api/submit-demo', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData)
-      // });
-      
-      setIsSuccess(true);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          business: formData.business,
+          sms_consent: formData.smsConsent ? "Yes" : "No",
+          subject: "New Demo Request from Novatide Website",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setIsSuccess(true);
+      } else {
+        setError(
+          data.message ||
+            "Oops! Something went wrong while submitting the form."
+        );
+      }
     } catch (err) {
       setError("Oops! Something went wrong while submitting the form.");
     } finally {
@@ -78,7 +100,6 @@ export default function DemoOptInForm() {
 
   const handleChange = (field: string, value: string | boolean) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
-    // Clear error for this field when user starts typing
     if (errors[field]) {
       setErrors((prev) => {
         const newErrors = { ...prev };
@@ -95,7 +116,8 @@ export default function DemoOptInForm() {
           <CheckCircle className="w-16 h-16 text-green-500" />
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 max-w-2xl">
-          Thank you! Your submission has been received, an employee will be in contact with you shortly!
+          Thank you! Your submission has been received, an employee will be in
+          contact with you shortly!
         </h2>
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
           <a
@@ -204,8 +226,9 @@ export default function DemoOptInForm() {
           />
           <label htmlFor="smsConsent" className="text-sm text-gray-300">
             I consent to receive SMS notifications from{" "}
-            <strong className="text-white">Novatide</strong>. Message frequency varies. Msg & data rates
-            may apply. Text HELP for assistance, reply STOP to unsubscribe at any time.
+            <strong className="text-white">Novatide</strong>. Message frequency
+            varies. Msg &amp; data rates may apply. Text HELP for assistance,
+            reply STOP to unsubscribe at any time.
           </label>
         </div>
         {errors.smsConsent && (
@@ -227,10 +250,9 @@ export default function DemoOptInForm() {
           )}
         </button>
 
-        {error && (
-          <p className="text-red-500 text-center mt-4">{error}</p>
-        )}
+        {error && <p className="text-red-500 text-center mt-4">{error}</p>}
       </form>
     </div>
   );
 }
+
