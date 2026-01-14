@@ -5,6 +5,7 @@ export default function ContactPage() {
     <main className="min-h-screen pt-16">
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
+          {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Get In Touch
@@ -17,12 +18,14 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
+              {/* Info Card */}
               <div className="glassmorphism border border-gray-800 rounded-2xl p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">
                   Contact Information
                 </h2>
 
                 <div className="space-y-6">
+                  {/* Phone */}
                   <div className="flex items-start space-x-4">
                     <div className="bg-blue-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Phone className="w-6 h-6 text-white" />
@@ -38,6 +41,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+                  {/* Email */}
                   <div className="flex items-start space-x-4">
                     <div className="bg-blue-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6 text-white" />
@@ -53,6 +57,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+                  {/* Location */}
                   <div className="flex items-start space-x-4">
                     <div className="bg-blue-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6 text-white" />
@@ -65,19 +70,23 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              {/* Business Hours */}
               <div className="glassmorphism border border-gray-800 rounded-2xl p-8">
                 <h3 className="text-xl font-bold text-white mb-4">
                   Business Hours
                 </h3>
+
                 <div className="space-y-2 text-gray-400">
                   <div className="flex justify-between">
                     <span>Monday - Friday</span>
                     <span>9:00 AM - 6:00 PM EST</span>
                   </div>
+
                   <div className="flex justify-between">
                     <span>Saturday</span>
                     <span>10:00 AM - 4:00 PM EST</span>
                   </div>
+
                   <div className="flex justify-between">
                     <span>Sunday</span>
                     <span>Closed</span>
@@ -93,6 +102,7 @@ export default function ContactPage() {
                 method="POST"
                 className="space-y-6"
               >
+                {/* Name */}
                 <div>
                   <label className="block text-gray-300 mb-2">Name</label>
                   <input
@@ -104,6 +114,7 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Email */}
                 <div>
                   <label className="block text-gray-300 mb-2">Email</label>
                   <input
@@ -115,6 +126,7 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Phone */}
                 <div>
                   <label className="block text-gray-300 mb-2">Phone</label>
                   <input
@@ -125,6 +137,7 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Message */}
                 <div>
                   <label className="block text-gray-300 mb-2">Message</label>
                   <textarea
@@ -135,20 +148,23 @@ export default function ContactPage() {
                   ></textarea>
                 </div>
 
-                {/* Redirect to your thank-you page */}
+                {/* Hidden Fields */}
                 <input
                   type="hidden"
                   name="_next"
                   value="https://novatidecreative.vercel.app/thank-you"
                 />
 
-                {/* Email subject line */}
                 <input
                   type="hidden"
                   name="_subject"
                   value="New Lead from Novatide Creative"
                 />
 
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+
+                {/* Submit Button */}
                 <button
                   type="submit"
                   className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
@@ -163,4 +179,3 @@ export default function ContactPage() {
     </main>
   );
 }
-
