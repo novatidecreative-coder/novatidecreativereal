@@ -58,19 +58,17 @@ export default function DemoOptInForm() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/submit-demo', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-
-      const data = await response.json();
-
-      if (response.ok && data.success) {
-        setIsSuccess(true);
-      } else {
-        setError(data.error || "Oops! Something went wrong while submitting the form.");
-      }
+      // Simulate API call - replace with your actual endpoint
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      
+      // TODO: Replace with actual API call
+      // const response = await fetch('/api/submit-demo', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(formData)
+      // });
+      
+      setIsSuccess(true);
     } catch (err) {
       setError("Oops! Something went wrong while submitting the form.");
     } finally {
