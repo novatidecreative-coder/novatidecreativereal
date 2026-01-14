@@ -1,4 +1,3 @@
-import DemoOptInForm from "@/components/DemoOptInForm";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactPage() {
@@ -11,7 +10,7 @@ export default function ContactPage() {
               Get In Touch
             </h1>
             <p className="text-xl text-gray-400">
-              Ready to transform your business? Let's talk.
+              Ready to transform your business? Let&apos;s talk.
             </p>
           </div>
 
@@ -22,7 +21,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold text-white mb-6">
                   Contact Information
                 </h2>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-blue-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -30,7 +29,10 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-white font-semibold mb-1">Phone</h3>
-                      <a href="tel:917-480-6014" className="text-gray-400 hover:text-white transition-colors">
+                      <a
+                        href="tel:917-480-6014"
+                        className="text-gray-400 hover:text-white transition-colors"
+                      >
                         917-480-6014
                       </a>
                     </div>
@@ -42,7 +44,10 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-white font-semibold mb-1">Email</h3>
-                      <a href="mailto:novatidecreative@gmail.com" className="text-gray-400 hover:text-white transition-colors">
+                      <a
+                        href="mailto:novatidecreative@gmail.com"
+                        className="text-gray-400 hover:text-white transition-colors"
+                      >
                         novatidecreative@gmail.com
                       </a>
                     </div>
@@ -54,9 +59,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-white font-semibold mb-1">Location</h3>
-                      <p className="text-gray-400">
-                        Manhasset, NY
-                      </p>
+                      <p className="text-gray-400">Manhasset, NY</p>
                     </div>
                   </div>
                 </div>
@@ -83,70 +86,81 @@ export default function ContactPage() {
               </div>
             </div>
 
-           {/* Contact Form */}
-<div className="glassmorphism border border-gray-800 rounded-2xl p-8">
-  <form
-    action="https://formsubmit.co/novatidecreative@gmail.com"
-    method="POST"
-    className="space-y-6"
-  >
-    <div>
-      <label className="block text-gray-300 mb-2">Name</label>
-      <input
-        type="text"
-        name="name"
-        required
-        className="w-full p-3 rounded-lg bg-black/40 border border-gray-700 text-white"
-        placeholder="Your Name"
-      />
-    </div>
+            {/* Contact Form */}
+            <div className="glassmorphism border border-gray-800 rounded-2xl p-8">
+              <form
+                action="https://formsubmit.co/novatidecreative@gmail.com"
+                method="POST"
+                className="space-y-6"
+              >
+                <div>
+                  <label className="block text-gray-300 mb-2">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    className="w-full p-3 rounded-lg bg-black/40 border border-gray-700 text-white"
+                    placeholder="Your Name"
+                  />
+                </div>
 
-    <div>
-      <label className="block text-gray-300 mb-2">Email</label>
-      <input
-        type="email"
-        name="email"
-        required
-        className="w-full p-3 rounded-lg bg-black/40 border border-gray-700 text-white"
-        placeholder="Your Email"
-      />
-    </div>
+                <div>
+                  <label className="block text-gray-300 mb-2">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    className="w-full p-3 rounded-lg bg-black/40 border border-gray-700 text-white"
+                    placeholder="Your Email"
+                  />
+                </div>
 
-    <div>
-      <label className="block text-gray-300 mb-2">Phone</label>
-      <input
-        type="text"
-        name="phone"
-        className="w-full p-3 rounded-lg bg-black/40 border border-gray-700 text-white"
-        placeholder="Phone Number"
-      />
-    </div>
+                <div>
+                  <label className="block text-gray-300 mb-2">Phone</label>
+                  <input
+                    type="text"
+                    name="phone"
+                    className="w-full p-3 rounded-lg bg-black/40 border border-gray-700 text-white"
+                    placeholder="Phone Number"
+                  />
+                </div>
 
-    <div>
-      <label className="block text-gray-300 mb-2">Message</label>
-      <textarea
-        name="message"
-        required
-        className="w-full p-3 rounded-lg bg-black/40 border border-gray-700 text-white h-32"
-        placeholder="Tell us how we can help"
-      ></textarea>
-    </div>
+                <div>
+                  <label className="block text-gray-300 mb-2">Message</label>
+                  <textarea
+                    name="message"
+                    required
+                    className="w-full p-3 rounded-lg bg-black/40 border border-gray-700 text-white h-32"
+                    placeholder="Tell us how we can help"
+                  ></textarea>
+                </div>
 
-    {/* Redirect to your thank-you page */}
-    <input
-      type="hidden"
-      name="_next"
-      value="https://novatidecreative.vercel.app/thank-you"
-    />
+                {/* Redirect to your thank-you page */}
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://novatidecreative.vercel.app/thank-you"
+                />
 
-    {/* Email subject line */}
-    <input
-      type="hidden"
-      name="_subject"
+                {/* Email subject line */}
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Lead from Novatide Creative"
+                />
 
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
     </main>
   );
 }
+
