@@ -225,10 +225,8 @@ export default function DemoOptInForm() {
             disabled={isSubmitting}
           />
           <label htmlFor="smsConsent" className="text-sm text-gray-300">
-            I consent to receive SMS notifications from{" "}
-            <strong className="text-white">Novatide</strong>. Message frequency
-            varies. Msg &amp; data rates may apply. Text HELP for assistance,
-            reply STOP to unsubscribe at any time.
+            I consent to receive SMS text messages from{" "}
+            <strong className="text-white">Novatide Creative</strong> for appointment reminders, service updates, and promotional messages. Message frequency varies. Standard message and data rates may apply based on your carrier plan. Reply STOP to unsubscribe or HELP for support at any time.
           </label>
         </div>
         {errors.smsConsent && (
