@@ -40,8 +40,8 @@ export default function InstructionsForOptOutPage() {
                 <h3 className="text-xl font-semibold text-green-400 mb-3">Option 2: Email Request</h3>
                 <p className="text-gray-300">
                   Send an email to{" "}
-                  <a href="mailto:novatidecreative@gmail.com" className="text-blue-400 hover:text-blue-300 underline">
-                    novatidecreative@gmail.com
+                  <a href="mailto:team@novatidecreative.com" className="text-blue-400 hover:text-blue-300 underline">
+                    team@novatidecreative.com
                   </a>{" "}
                   with the subject line "Unsubscribe from Marketing Emails" and include the email address you wish to remove from our list.
                 </p>
@@ -111,8 +111,8 @@ export default function InstructionsForOptOutPage() {
                 <p className="text-gray-300 mb-3">You can opt out by contacting us:</p>
                 <ul className="space-y-2 text-gray-300">
                   <li>• Email:{" "}
-                    <a href="mailto:novatidecreative@gmail.com" className="text-blue-400 hover:text-blue-300 underline">
-                      novatidecreative@gmail.com
+                    <a href="mailto:team@novatidecreative.com" className="text-blue-400 hover:text-blue-300 underline">
+                      team@novatidecreative.com
                     </a>
                   </li>
                   <li>• Phone:{" "}
@@ -163,8 +163,8 @@ export default function InstructionsForOptOutPage() {
                 <h3 className="text-xl font-semibold text-green-400 mb-3">Email or Phone Request</h3>
                 <p className="text-gray-300">
                   Contact us at{" "}
-                  <a href="mailto:novatidecreative@gmail.com" className="text-blue-400 hover:text-blue-300 underline">
-                    novatidecreative@gmail.com
+                  <a href="mailto:team@novatidecreative.com" className="text-blue-400 hover:text-blue-300 underline">
+                    team@novatidecreative.com
                   </a>{" "}
                   or{" "}
                   <a href="tel:+1 917-809-5712" className="text-blue-400 hover:text-blue-300 underline">
@@ -253,8 +253,8 @@ export default function InstructionsForOptOutPage() {
             <div className="bg-gray-900 rounded-xl p-6">
               <ol className="list-decimal pl-6 space-y-3 text-gray-300">
                 <li>Send an email to{" "}
-                  <a href="mailto:novatidecreative@gmail.com" className="text-blue-400 hover:text-blue-300 underline">
-                    novatidecreative@gmail.com
+                  <a href="mailto:team@novatidecreative.com" className="text-blue-400 hover:text-blue-300 underline">
+                    team@novatidecreative.com
                   </a>
                 </li>
                 <li>Subject line: "Data Deletion Request"</li>
@@ -288,8 +288,8 @@ export default function InstructionsForOptOutPage() {
             <div className="bg-gray-900 rounded-xl p-6">
               <p className="text-gray-300">
                 Contact us at{" "}
-                <a href="mailto:novatidecreative@gmail.com" className="text-blue-400 hover:text-blue-300 underline">
-                  novatidecreative@gmail.com
+                <a href="mailto:team@novatidecreative.com" className="text-blue-400 hover:text-blue-300 underline">
+                  team@novatidecreative.com
                 </a>{" "}
                 with the subject "Opt Out of Third-Party Sharing." Please note that this may limit our ability to provide certain services to you.
               </p>
@@ -343,8 +343,8 @@ export default function InstructionsForOptOutPage() {
               <div className="space-y-2 text-gray-300">
                 <p>Manhasset, NY</p>
                 <p>Email:{" "}
-                  <a href="mailto:novatidecreative@gmail.com" className="text-blue-400 hover:text-blue-300 underline">
-                    novatidecreative@gmail.com
+                  <a href="mailto:team@novatidecreative.com" className="text-blue-400 hover:text-blue-300 underline">
+                    team@novatidecreative.com
                   </a>
                 </p>
                 <p>Phone:{" "}

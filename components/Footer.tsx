@@ -16,9 +16,9 @@ export default function Footer() {
                 <Phone className="w-4 h-4" />
                 <span>+1 917-809-5712</span>
               </a>
-              <a href="mailto:novatidecreative@gmail.com" className="flex items-center space-x-2 hover:text-white transition-colors">
+              <a href="mailto:team@novatidecreative.com" className="flex items-center space-x-2 hover:text-white transition-colors">
                 <Mail className="w-4 h-4" />
-                <span>novatidecreative@gmail.com</span>
+                <span>team@novatidecreative.com</span>
               </a>
               <div className="pt-4">
                 <a

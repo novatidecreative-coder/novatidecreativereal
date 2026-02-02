@@ -283,8 +283,8 @@ export default function PrivacyPolicyPage() {
               <p className="font-semibold text-white mb-2">Novatide Creative</p>
               <p>Manhasset, NY</p>
               <p>Email:{" "}
-                <a href="mailto:novatidecreative@gmail.com" className="text-blue-400 hover:text-blue-300 underline">
-                  novatidecreative@gmail.com
+                <a href="mailto:team@novatidecreative.com" className="text-blue-400 hover:text-blue-300 underline">
+                  team@novatidecreative.com
                 </a>
               </p>
               <p>Phone:{" "}
