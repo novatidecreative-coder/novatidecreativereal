@@ -18,6 +18,7 @@ export default function DemoOptInForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submittedEmail, setSubmittedEmail] = useState(""); // Store submitted email
   const [error, setError] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -110,6 +111,9 @@ export default function DemoOptInForm() {
       const data = await response.json();
 
       if (response.ok && data.success) {
+        // Store the submitted email before clearing
+        setSubmittedEmail(formData.email);
+        
         // Clear form on success
         setFormData({
           firstName: "",
@@ -159,7 +163,7 @@ export default function DemoOptInForm() {
         <p className="text-gray-400 text-lg mb-8 max-w-xl">
           Check your email at{" "}
           <span className="text-blue-400 font-semibold">
-            team@novatidecreative.com
+            {submittedEmail}
           </span>{" "}
           for next steps.
         </p>
