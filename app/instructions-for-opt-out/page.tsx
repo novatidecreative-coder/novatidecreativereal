@@ -51,8 +51,8 @@ export default function InstructionsForOptOutPage() {
                 <h3 className="text-xl font-semibold text-green-400 mb-3">Option 3: Phone Request</h3>
                 <p className="text-gray-300">
                   Call us at{" "}
-                  <a href="tel:917-480-6014" className="text-blue-400 hover:text-blue-300 underline">
-                    (917) 480-6014
+                  <a href="tel:+19178095712" className="text-blue-400 hover:text-blue-300 underline">
+                    +1 917-809-5712
                   </a>{" "}
                   and request to be removed from our marketing email list.
                 </p>
@@ -116,7 +116,7 @@ export default function InstructionsForOptOutPage() {
                     </a>
                   </li>
                   <li>• Phone:{" "}
-                    <a href="tel:917-480-6014" className="text-blue-400 hover:text-blue-300 underline">
+                    <a href="tel:+1 917-809-5712" className="text-blue-400 hover:text-blue-300 underline">
                       (917) 480-6014
                     </a>
                   </li>
@@ -167,7 +167,7 @@ export default function InstructionsForOptOutPage() {
                     novatidecreative@gmail.com
                   </a>{" "}
                   or{" "}
-                  <a href="tel:917-480-6014" className="text-blue-400 hover:text-blue-300 underline">
+                  <a href="tel:+1 917-809-5712" className="text-blue-400 hover:text-blue-300 underline">
                     (917) 480-6014
                   </a>{" "}
                   and request to be added to our Do Not Call list. Please provide your phone number.
@@ -348,7 +348,7 @@ export default function InstructionsForOptOutPage() {
                   </a>
                 </p>
                 <p>Phone:{" "}
-                  <a href="tel:917-480-6014" className="text-blue-400 hover:text-blue-300 underline">
+                  <a href="tel:+1 917-809-5712" className="text-blue-400 hover:text-blue-300 underline">
                     (917) 480-6014
                   </a>
                 </p>

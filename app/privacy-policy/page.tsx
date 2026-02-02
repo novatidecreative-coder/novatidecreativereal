@@ -202,63 +202,68 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section id="sms-privacy">
-            <h2 className="text-2xl font-semibold text-white mt-12 mb-4">12. SMS and Text Messaging</h2>
+            <h2 className="text-2xl font-semibold text-white mt-12 mb-4">12. SMS Messaging & Data Privacy</h2>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">12.1 Collection of Mobile Phone Numbers</h3>
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">How We Collect Your Information</h3>
             <p>
-              When you opt in to receive SMS messages from us, we collect your mobile phone number and related information (such as your name and the date you opted in).
+              We collect phone numbers from customers who opt-in to receive SMS messages via our "Request a Demo" form at{" "}
+              <Link href="/book-demo" className="text-blue-400 hover:text-blue-300 underline">
+                https://novatidecreative.com/book-demo
+              </Link>
+              . When you check the "SMS Appointment Reminders & Updates" consent box, you authorize us to collect and use your phone number for SMS communications.
+            </p>
+            <p className="mt-4">
+              <strong className="text-white">Contact Number:</strong> All SMS messages are sent from{" "}
+              <span className="text-blue-400 font-mono">+1 917-809-5712</span>
             </p>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">12.2 Use of Mobile Phone Numbers</h3>
-            <p>We use your mobile phone number to:</p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Send marketing messages about our services and promotions</li>
-              <li>Send appointment reminders and confirmations</li>
-              <li>Provide customer service and support</li>
-              <li>Send service-related updates and notifications</li>
-              <li>Facilitate lead qualification and estimate processes</li>
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">What We Use Your Information For</h3>
+            <p>Your phone number is used exclusively to send you:</p>
+            <ul className="list-disc pl-6 space-y-2 mt-4">
+              <li>Appointment reminders for your demo call</li>
+              <li>Service setup updates and progress notifications</li>
+              <li>Product information and updates (only if you opt-in to promotional messages)</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">12.3 Sharing of Mobile Phone Numbers</h3>
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Data Sharing & Privacy Protection</h3>
             <p>
-              We do not sell or share your mobile phone number with third parties for their marketing purposes. We may share your number with:
+              Your phone number and SMS opt-in information is <strong className="text-white">NOT shared with third parties</strong> for marketing purposes. Your data is never:
             </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>SMS service providers who send messages on our behalf</li>
-              <li>Customer relationship management (CRM) systems</li>
-              <li>Analytics services to measure message effectiveness</li>
+            <ul className="list-disc pl-6 space-y-2 mt-4">
+              <li>Sold to other companies</li>
+              <li>Rented to marketing firms</li>
+              <li>Shared with affiliates for promotional purposes</li>
+              <li>Used for purposes other than those disclosed</li>
             </ul>
             <p className="mt-4">
-              All third parties are contractually obligated to protect your information and use it only for the purposes we specify.
+              We only share your phone number with our SMS service provider (Twilio/HighLevel) to deliver messages on our behalf. These service providers are contractually obligated to maintain the confidentiality of your information.
             </p>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">12.4 Opt-Out Rights</h3>
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Data Security</h3>
             <p>
-              You can opt out of SMS messages at any time by replying STOP to any message or following the instructions on our{" "}
+              We take reasonable measures to protect your phone number from unauthorized access, alteration, disclosure, or destruction through industry-standard security practices and encryption.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Your Rights</h3>
+            <p>You can:</p>
+            <ul className="list-disc pl-6 space-y-2 mt-4">
+              <li>Request deletion of your phone number at any time by replying STOP to any SMS from <span className="text-blue-400 font-mono">+1 917-809-5712</span></li>
+              <li>Contact us at <a href="mailto:support@novatidecreative.com" className="text-blue-400 hover:text-blue-300 underline">support@novatidecreative.com</a> to request data removal</li>
+              <li>Call <a href="tel:+19178095712" className="text-blue-400 hover:text-blue-300 underline">+1 917-809-5712</a> during business hours for assistance</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">International Users</h3>
+            <p>
+              If you are located outside the United States, additional data protection laws may apply to your information. By opting in to SMS messages, you consent to the transfer and processing of your data as described in this policy.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Opt-Out Instructions</h3>
+            <p>
+              For detailed instructions on how to opt out of SMS messages, please visit our{" "}
               <Link href="/instructions-for-opt-out" className="text-blue-400 hover:text-blue-300 underline">
-                opt-out page
+                Instructions for Opt Out page
               </Link>
-              . After opting out, you will no longer receive SMS messages unless you re-opt-in.
-            </p>
-
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">12.5 Data Retention for SMS</h3>
-            <p>
-              We retain your mobile phone number and related SMS data for as long as you are opted in to our SMS program, plus a reasonable period afterward to comply with legal obligations and resolve disputes. You can request deletion of your information at any time.
-            </p>
-
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">12.6 Security of SMS Data</h3>
-            <p>
-              We use industry-standard security measures to protect your mobile phone number and SMS communications from unauthorized access, disclosure, or misuse.
-            </p>
-
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">12.7 Compliance</h3>
-            <p>
-              Our SMS program complies with the Telephone Consumer Protection Act (TCPA), CAN-SPAM Act, and other applicable laws and regulations.
-            </p>
-
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">12.8 Questions About SMS Privacy</h3>
-            <p>
-              If you have questions about how we handle your SMS data, please contact us using the information at the end of this policy.
+              .
             </p>
           </section>
 
@@ -283,8 +288,8 @@ export default function PrivacyPolicyPage() {
                 </a>
               </p>
               <p>Phone:{" "}
-                <a href="tel:917-480-6014" className="text-blue-400 hover:text-blue-300 underline">
-                  917-480-6014
+                <a href="tel:+1 917-809-5712" className="text-blue-400 hover:text-blue-300 underline">
+                  +1 917-809-5712
                 </a>
               </p>
             </div>

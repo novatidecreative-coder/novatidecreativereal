@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { CheckCircle, Loader2 } from "lucide-react";
+import { CheckCircle, Loader2, Phone } from "lucide-react";
+import Link from "next/link";
 
- const WEB3FORMS_ACCESS_KEY = "cc32d85d-bc44-43c7-93dc-8fcb35463b76"; // <- put your access key here
+const WEB3FORMS_ACCESS_KEY = "cc32d85d-bc44-43c7-93dc-8fcb35463b76"; // <- put your access key here
 
 export default function DemoOptInForm() {
   const [formData, setFormData] = useState({
@@ -11,7 +12,8 @@ export default function DemoOptInForm() {
     phone: "",
     email: "",
     business: "",
-    smsConsent: false,
+    smsAppointments: false,
+    smsMarketing: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -28,7 +30,7 @@ export default function DemoOptInForm() {
     if (!formData.phone.trim()) {
       newErrors.phone = "Phone number is required";
     } else if (
-      !/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(
+      !/^\+?1?\s?\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})$/.test(
         formData.phone
       )
     ) {
@@ -45,9 +47,7 @@ export default function DemoOptInForm() {
       newErrors.business = "Please tell us about your business";
     }
 
-    if (!formData.smsConsent) {
-      newErrors.smsConsent = "You must consent to receive SMS notifications";
-    }
+    // SMS consent is now OPTIONAL - no validation needed
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -76,7 +76,8 @@ export default function DemoOptInForm() {
           phone: formData.phone,
           email: formData.email,
           business: formData.business,
-          sms_consent: formData.smsConsent ? "Yes" : "No",
+          sms_appointments: formData.smsAppointments ? "Yes - Opted In" : "No",
+          sms_marketing: formData.smsMarketing ? "Yes - Opted In" : "No",
           subject: "New Demo Request from Novatide Website",
         }),
       });
@@ -213,25 +214,64 @@ export default function DemoOptInForm() {
           )}
         </div>
 
-        <div className="flex items-start space-x-3">
-          <input
-            type="checkbox"
-            id="smsConsent"
-            checked={formData.smsConsent}
-            onChange={(e) => handleChange("smsConsent", e.target.checked)}
-            className={`mt-1 w-4 h-4 rounded border ${
-              errors.smsConsent ? "border-red-500" : "border-gray-700"
-            } bg-[#1a1a1a] focus:ring-2 focus:ring-blue-500`}
-            disabled={isSubmitting}
-          />
-          <label htmlFor="smsConsent" className="text-sm text-gray-300">
-            I consent to receive SMS text messages from{" "}
-            <strong className="text-white">Novatide Creative</strong> for appointment reminders, service updates, and promotional messages. Message frequency varies. Standard message and data rates may apply based on your carrier plan. Reply STOP to unsubscribe or HELP for support at any time.
-          </label>
+        {/* SMS Consent Section */}
+        <div className="border border-gray-700 rounded-lg p-4 bg-gray-900/50">
+          <div className="flex items-center space-x-2 mb-3">
+            <Phone className="w-5 h-5 text-blue-400" />
+            <p className="text-sm font-semibold text-gray-300">
+              📱 SMS Messages from: <span className="text-white">+1 917-809-5712</span>
+            </p>
+          </div>
+          
+          <p className="text-xs text-gray-400 mb-4">
+            SMS consent is <strong className="text-white">optional</strong>. You can still request a demo without opting in to text messages.
+          </p>
+
+          {/* Checkbox 1: Appointment Reminders */}
+          <div className="flex items-start space-x-3 mb-4">
+            <input
+              type="checkbox"
+              id="smsAppointments"
+              checked={formData.smsAppointments}
+              onChange={(e) => handleChange("smsAppointments", e.target.checked)}
+              className="mt-1 w-4 h-4 rounded border border-gray-700 bg-[#1a1a1a] focus:ring-2 focus:ring-blue-500 cursor-pointer"
+              disabled={isSubmitting}
+            />
+            <label htmlFor="smsAppointments" className="text-sm text-gray-300 cursor-pointer">
+              <strong className="text-white">SMS Appointment Reminders & Updates</strong> (Optional)
+              <br />
+              <span className="text-xs text-gray-400">
+                Receive appointment reminders and service setup updates via text message.
+              </span>
+            </label>
+          </div>
+
+          {/* Checkbox 2: Marketing Messages */}
+          <div className="flex items-start space-x-3">
+            <input
+              type="checkbox"
+              id="smsMarketing"
+              checked={formData.smsMarketing}
+              onChange={(e) => handleChange("smsMarketing", e.target.checked)}
+              className="mt-1 w-4 h-4 rounded border border-gray-700 bg-[#1a1a1a] focus:ring-2 focus:ring-blue-500 cursor-pointer"
+              disabled={isSubmitting}
+            />
+            <label htmlFor="smsMarketing" className="text-sm text-gray-300 cursor-pointer">
+              <strong className="text-white">Marketing & Promotional Offers</strong> (Optional)
+              <br />
+              <span className="text-xs text-gray-400">
+                Receive special offers, product updates, and promotional messages.
+              </span>
+            </label>
+          </div>
+
+          <p className="text-xs text-gray-400 mt-4">
+            Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for support at any time. 
+            By checking above, you consent to receive SMS messages from{" "}
+            <strong className="text-white">Novatide Creative</strong> at{" "}
+            <strong className="text-white">+1 917-809-5712</strong>.
+          </p>
         </div>
-        {errors.smsConsent && (
-          <p className="text-red-500 text-sm">{errors.smsConsent}</p>
-        )}
 
         <button
           type="submit"
@@ -249,6 +289,19 @@ export default function DemoOptInForm() {
         </button>
 
         {error && <p className="text-red-500 text-center mt-4">{error}</p>}
+
+        {/* Footer Links */}
+        <div className="text-center text-xs text-gray-500 mt-4">
+          By submitting this form, you agree to our{" "}
+          <Link href="/terms-and-conditions" className="text-blue-400 hover:text-blue-300 underline" target="_blank">
+            Terms & Conditions
+          </Link>
+          {" "}and{" "}
+          <Link href="/privacy-policy" className="text-blue-400 hover:text-blue-300 underline" target="_blank">
+            Privacy Policy
+          </Link>
+          .
+        </div>
       </form>
     </div>
   );

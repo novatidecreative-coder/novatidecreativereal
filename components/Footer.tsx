@@ -12,9 +12,9 @@ export default function Footer() {
             <h3 className="text-2xl font-bold text-white mb-4">Novatide Creative</h3>
             <div className="space-y-2 text-gray-400">
               <p>Manhasset, NY</p>
-              <a href="tel:917-480-6014" className="flex items-center space-x-2 hover:text-white transition-colors">
+              <a href="tel:+19178095712" className="flex items-center space-x-2 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>917-480-6014</span>
+                <span>+1 917-809-5712</span>
               </a>
               <a href="mailto:novatidecreative@gmail.com" className="flex items-center space-x-2 hover:text-white transition-colors">
                 <Mail className="w-4 h-4" />

@@ -229,119 +229,140 @@ export default function TermsAndConditionsPage() {
           </section>
 
           <section id="sms-terms">
-            <h2 className="text-2xl font-semibold text-white mt-12 mb-4">17. SMS Text Messaging Terms & Conditions</h2>
-            
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.1 Consent to Receive SMS Messages</h3>
+            <h2 className="text-2xl font-semibold text-white mt-12 mb-4">17. SMS Messaging Terms & Service</h2>
+
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">SMS Program Overview</h3>
             <p>
-              By providing your mobile phone number and opting in to our SMS messaging program, you expressly consent to receive automated marketing and transactional text messages from Novatide Creative at the mobile number you provided. Consent is not required as a condition of purchasing any goods or services.
+              By checking the "SMS Appointment Reminders & Updates" consent box on our demo form, you are agreeing to participate in Novatide Creative's SMS messaging program. You will receive appointment reminders, service setup updates, and (optionally) promotional offers via text message to the phone number you provide.
+            </p>
+            <p className="mt-4">
+              <strong className="text-white">SMS Contact Number:</strong> All messages will be sent from{" "}
+              <a href="tel:+19178095712" className="text-blue-400 hover:text-blue-300 underline font-mono">
+                +1 917-809-5712
+              </a>
             </p>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.2 Types of Messages</h3>
-            <p>You may receive the following types of SMS messages:</p>
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Message Frequency</h3>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Marketing messages about our services, promotions, and updates</li>
-              <li>Appointment reminders and confirmations</li>
-              <li>Service updates and notifications</li>
-              <li>Lead qualification questions and follow-ups</li>
-              <li>Requests for photos or documents related to service estimates</li>
-              <li>Customer service and support messages</li>
+              <li><strong className="text-white">Appointment/Service Updates:</strong> 2-4 messages per month (varies based on your activity)</li>
+              <li><strong className="text-white">Promotional Messages:</strong> Only sent if you opt-in to the marketing consent box; frequency varies</li>
+              <li><strong className="text-white">Emergency/Critical Updates:</strong> May be sent outside normal message frequency if needed</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.3 Message Frequency</h3>
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Message Rates & Charges</h3>
             <p>
-              Message frequency varies depending on your engagement with our services. You may receive up to 10 messages per month for marketing purposes, and additional messages for transactional purposes (such as appointment reminders or service-related communications).
+              Standard message and data rates from your carrier will apply to all SMS messages you receive. Novatide Creative is not responsible for message charges. Contact your mobile carrier for details about your specific plan and messaging rates.
             </p>
+            <div className="bg-gray-900 rounded-lg p-4 mt-4">
+              <p className="text-sm text-gray-400 mb-2">Example charges:</p>
+              <ul className="list-disc pl-6 space-y-1 text-sm text-gray-400">
+                <li>Standard SMS: Typically $0.01-$0.25 per message depending on your carrier</li>
+                <li>MMS (if applicable): May have higher rates</li>
+              </ul>
+            </div>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.4 Opt-Out Instructions</h3>
-            <p>
-              You can opt out of receiving SMS messages at any time by:
-            </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Replying STOP to any message you receive from us</li>
-              <li>Texting STOP to our shortcode or phone number</li>
-              <li>Following the opt-out instructions on our website at{" "}
-                <Link href="/instructions-for-opt-out" className="text-blue-400 hover:text-blue-300 underline">
-                  novatidecreative.com/instructions-for-opt-out
-                </Link>
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Opting Out (STOP)</h3>
+            <p>You can unsubscribe from all SMS messages at any time by:</p>
+            <ul className="list-disc pl-6 space-y-2 mt-4">
+              <li>Replying <strong className="text-white font-mono">STOP</strong> to any message from us, or</li>
+              <li>Texting <strong className="text-white font-mono">STOP</strong> to{" "}
+                <a href="tel:+19178095712" className="text-blue-400 hover:text-blue-300 underline font-mono">
+                  +1 917-809-5712
+                </a>
               </li>
-              <li>Contacting us at novatidecreative@gmail.com or 917-480-6014</li>
             </ul>
             <p className="mt-4">
-              After you opt out, you will receive a confirmation message, and no further messages will be sent unless you re-opt-in.
+              Within 24 hours of your opt-out request, you will receive a confirmation that you have been removed from our SMS program. You will not receive any further messages from this number.
             </p>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.5 Help and Support</h3>
-            <p>
-              For help or support regarding SMS messages, reply HELP to any message or contact us at:
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Getting Help (HELP)</h3>
+            <p>For assistance with our SMS program, you can:</p>
+            <ul className="list-disc pl-6 space-y-2 mt-4">
+              <li>Reply <strong className="text-white font-mono">HELP</strong> to any message, or</li>
+              <li>Call us at{" "}
+                <a href="tel:+19178095712" className="text-blue-400 hover:text-blue-300 underline">
+                  +1 917-809-5712
+                </a>{" "}
+                during business hours, or</li>
+              <li>Email{" "}
+                <a href="mailto:support@novatidecreative.com" className="text-blue-400 hover:text-blue-300 underline">
+                  support@novatidecreative.com
+                </a>
+              </li>
+            </ul>
+            <p className="mt-4">
+              When you reply HELP, you will receive information about how to contact customer support and manage your preferences.
             </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Email: novatidecreative@gmail.com</li>
-              <li>Phone: 917-480-6014</li>
+
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Consent is Optional</h3>
+            <div className="bg-blue-900/20 border border-blue-500/50 rounded-lg p-4 mt-4">
+              <p className="text-blue-400">
+                <strong>Important:</strong> Signing up for SMS messages is completely voluntary. You are not required to opt-in to SMS to request a demo, book a service, or purchase any of our products or services. Providing or withholding SMS consent will not affect your ability to access our services.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Carrier Compliance</h3>
+            <p>
+              Novatide Creative complies with all TCPA (Telephone Consumer Protection Act), CTIA (Cellular Telecommunications and Internet Association), and carrier rules regarding SMS messaging. We will not:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 mt-4">
+              <li>Send messages outside 8 AM - 9 PM in your local time zone (except critical updates)</li>
+              <li>Send messages to numbers on Do Not Call lists</li>
+              <li>Send messages to reassigned numbers</li>
+              <li>Discriminate or retaliate against users who opt-out</li>
+              <li>Charge fees for opting out</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.6 Message and Data Rates</h3>
-            <p>
-              Message and data rates may apply based on your mobile carrier's plan. Please check with your mobile service provider for details on your specific plan. Novatide Creative is not responsible for any charges incurred from your mobile carrier.
-            </p>
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">No Liability for Carrier Issues</h3>
+            <p>Novatide Creative is not responsible for:</p>
+            <ul className="list-disc pl-6 space-y-2 mt-4">
+              <li>Message delays or non-delivery due to carrier issues</li>
+              <li>Technical problems with your phone or carrier network</li>
+              <li>Messages being filtered or blocked by your device or carrier</li>
+              <li>SMS delivery failures due to carrier maintenance or outages</li>
+            </ul>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.7 Supported Carriers</h3>
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Supported Carriers</h3>
             <p>
               Our SMS service is available on major U.S. carriers including AT&T, T-Mobile, Verizon, Sprint, Boost, Cricket, MetroPCS, U.S. Cellular, and others. Service may not be available on all carriers or in all areas.
             </p>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.8 Mobile Device Requirements</h3>
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Changes to This Agreement</h3>
             <p>
-              You must have a mobile device capable of two-way text messaging and an active mobile phone plan with a participating carrier.
+              We may update these SMS terms at any time. Changes will be effective immediately upon posting to our website. Your continued use of our SMS program after changes are posted constitutes your acceptance of the updated terms.
             </p>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.9 Privacy and Data Collection</h3>
-            <p>
-              When you opt in to SMS messaging, we collect your mobile phone number and related information. This information is used solely for the purpose of sending you text messages and is protected according to our{" "}
-              <Link href="/privacy-policy" className="text-blue-400 hover:text-blue-300 underline">
-                Privacy Policy
-              </Link>
-              . We do not sell or share your mobile number with third parties for their marketing purposes.
-            </p>
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Program Termination</h3>
+            <p>We reserve the right to terminate your participation in the SMS program if:</p>
+            <ul className="list-disc pl-6 space-y-2 mt-4">
+              <li>Your account is suspended or terminated for any reason</li>
+              <li>You use the SMS service in violation of these terms</li>
+              <li>Carrier regulations require termination</li>
+              <li>We discontinue the SMS program</li>
+            </ul>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.10 Accuracy of Information</h3>
-            <p>
-              You are responsible for providing accurate and up-to-date mobile phone number information. If you change your phone number, please update your information or opt out and re-opt-in with your new number.
-            </p>
-
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.11 Limitations and Disclaimer</h3>
-            <p>
-              We are not liable for any delays or failures in receipt of SMS messages, as delivery is subject to effective transmission by your mobile carrier. SMS messaging is provided "as is," and we make no warranties regarding the timeliness or reliability of message delivery.
-            </p>
-
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.12 Right to Modify or Terminate</h3>
-            <p>
-              We reserve the right to modify or terminate the SMS program at any time without notice. We may also suspend or terminate your participation in the program if we believe you are in violation of these terms.
-            </p>
-
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.13 MMS Messaging</h3>
-            <p>
-              Some messages may be sent as MMS (Multimedia Messaging Service) and may include images or other media. Standard MMS rates may apply.
-            </p>
-
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.14 Age Restriction</h3>
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Age Restriction</h3>
             <p>
               You must be at least 18 years of age to opt in to our SMS program. By opting in, you certify that you are at least 18 years old.
             </p>
 
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.15 Compliance with Laws</h3>
-            <p>
-              Our SMS program complies with the Telephone Consumer Protection Act (TCPA), CAN-SPAM Act, and other applicable laws and regulations.
-            </p>
-
-            <h3 className="text-xl font-semibold text-white mt-8 mb-3">17.16 Questions or Concerns</h3>
+            <h3 className="text-xl font-semibold text-white mt-8 mb-3">Questions or Concerns</h3>
             <p>
               If you have any questions or concerns about our SMS program, please contact us at:
             </p>
-            <div className="bg-gray-900 rounded-lg p-4 mt-4">
-              <p>Novatide Creative</p>
+            <div className="bg-gray-900 rounded-lg p-6 mt-4">
+              <p className="font-semibold text-white mb-2">Novatide Creative</p>
               <p>Manhasset, NY</p>
-              <p>Email: novatidecreative@gmail.com</p>
-              <p>Phone: 917-480-6014</p>
+              <p>Email:{" "}
+                <a href="mailto:support@novatidecreative.com" className="text-blue-400 hover:text-blue-300 underline">
+                  support@novatidecreative.com
+                </a>
+              </p>
+              <p>Phone:{" "}
+                <a href="tel:+19178095712" className="text-blue-400 hover:text-blue-300 underline">
+                  +1 917-809-5712
+                </a>
+              </p>
             </div>
           </section>
 
@@ -359,8 +380,8 @@ export default function TermsAndConditionsPage() {
                 </a>
               </p>
               <p>Phone:{" "}
-                <a href="tel:917-480-6014" className="text-blue-400 hover:text-blue-300 underline">
-                  917-480-6014
+                <a href="tel:+19178095712" className="text-blue-400 hover:text-blue-300 underline">
+                  +1 917-809-5712
                 </a>
               </p>
             </div>

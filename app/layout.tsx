@@ -80,6 +80,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://cdn.prod.website-files.com" />
         <link rel="dns-prefetch" href="https://cdn.prod.website-files.com" />
         
+        {/* Ahrefs Analytics */}
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="0sW3RHTZhUagYk7ukS+bkw"
+          async
+        />
+        
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
